@@ -1,8 +1,8 @@
-.PHONY: create-cluster
-create-cluster:
+.PHONY: dev-up
+dev-up:
 	kind create cluster --config=./kind-config.yaml
 	kubectl cluster-info --context kind-cdk8s-crossplane-demo
 
-.PHONY: delete-cluster
-delete-cluster:
+.PHONY: dev-down
+dev-down:
 	kind delete cluster --name=cdk8s-crossplane-demo
