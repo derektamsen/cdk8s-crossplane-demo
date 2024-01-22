@@ -25,5 +25,8 @@
 	"remoteUser": "root",
 
 	// Use the host network to make it easy to access the kind k8s cluster api
-	"runArgs": ["--network=host"]
+	"runArgs": ["--network=host"],
+
+	// install the cdk8s cli
+	"postCreateCommand": "npm install -g cdk8s-cli"
 }
